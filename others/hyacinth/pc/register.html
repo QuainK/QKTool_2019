@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/userbox.css">
+    <script src="js/ui_userbox.js"></script>
+    <script src="js/data_userbox.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <title>风信子Hyacinth</title>
+</head>
+
+<body>
+    <div class="header">正在加载网页头部内容</div>
+
+
+    <div class="content">
+        <script type="text/javascript">
+            write_pc_html_content_navbar();
+        </script>
+
+        <div class="userbox">
+            <form id="userdata" name="userdata" method="post" action="register.php"
+                onsubmit="return check_input(this);">
+                <fieldset>
+                    <legend class="userbox-title">
+                        <h3>用户注册</h3>
+                    </legend>
+                    <div class="form-elements">
+                        <label for="email" class="userbox-label">邮箱</label>
+                        <span id="emailerr" name="emailerr" style="color:red">*</span>
+                    </div>
+                    <div class="form-elements">
+                        <input type="text" class="userbox-textbox" id="email" name="email" placeholder="邮箱" value="">
+                    </div>
+                    <div class="form-elements">
+                        <label for="phone" class="userbox-label">手机号</label>
+                        <span id="phoneerr" name="phoneerr" style="color:red">*</span>
+                    </div>
+                    <div class="form-elements">
+                        <input type="text" class="userbox-textbox" id="phone" name="phone" placeholder="手机号" value="">
+                    </div>
+                    <div class="form-elements">
+                        <label for="password" class="userbox-label">密码</label>
+                        <span id="passworderr" name="passworderr" style="color:red">*</span>
+                    </div>
+                    <div class="form-elements">
+                        <input type="password" class="userbox-textbox" id="password" name="password" placeholder="密码"
+                            value="">
+                    </div>
+
+                    <div class="form-elements">
+                        <input type="submit" name="submit" class="userbox-button" value="注册">
+                        <!-- <input type="submit" name="submit" class="userbox-button" value="维护中，暂不支持注册" disabled> -->
+                    </div>
+                    <div class="form-elements">
+                        已有账号，<a style="color: #666;text-decoration: underline" href="login.html">直接登录</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class='footer'>正在加载网页底部内容</div>
+    <script type="text/javascript">
+        //判断输入是否为email    
+        function IsEmail() {
+            var str = document.getElementById('email').value.trim();
+            if (str.length != 0) {
+                reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+                if (!reg.test(str)) {
+                    return false; //不是email
+                } else {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        }
+        //判断输入是否为手机号
+        function IsPhone() {
+            var str = document.getElementById('phone').value.trim();
+            if (str.length == 11) {
+                reg = /^\d{11}$/;
+                if (!reg.test(str)) return false;
+                else return true;
+            } else {
+                return false;
+            }
+        }
+
+        function check_input(userdata) {
+            var emailerr = document.getElementById("emailerr");
+            var phoneerr = document.getElementById("phoneerr");
+            var passworderr = document.getElementById("passworderr");
+            var form_input_correct = true;
+            var first_err_index = 0;
+            emailerr.innerHTML = "*";
+            phoneerr.innerHTML = "*";
+            passworderr.innerHTML = "*";
+
+            if (IsEmail() == false) {
+                form_input_correct = false;
+                emailerr.innerHTML = "* 邮箱格式不正确";
+            }
+            if (IsPhone() == false) {
+                form_input_correct = false;
+                phoneerr.innerHTML = "* 手机号格式不正确";
+            }
+            if (userdata.password.value == "") {
+                form_input_correct = false;
+                passworderr.innerHTML = "* 密码不能为空";
+            }
+            switch (first_err_index) {
+                case '1':
+                    userdata.email.focus();
+                    break;
+                case '2':
+                    userdata.phone.focus();
+                    break;
+                case '3':
+                    userdata.password.focus();
+                    break;
+                default:
+                    break;
+            }
+            if (form_input_correct == false) return false;
+            else return true;
+        }
+    </script>
+
+    <script>
+        $(function () {
+            $(document).ready(function () {
+                $('.header').load('common/header.html');
+                $('.footer').load('common/footer.html');
+                // alert($(window).height());
+                // alert($(document).height()); 
+                if ($(window).height() >= $(document).height()) {
+                    ($('.footer')).toggleClass("footer-pagebottom");
+                }
+            })
+        });
+    </script>
+
+</body>
+
+</html>

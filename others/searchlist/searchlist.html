@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../../public/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+	<style type="text/css">
+		img {
+			width: 20%;
+		}
+
+		.textbox {
+			outline: none;
+			display: inline-block;
+			vertical-align: top;
+			width: 70%;
+			padding: 0.5em 0.5em;
+			border: 1px solid black;
+			font-size: 1em;
+		}
+
+		.textbox:active {
+			border: 1px solid black;
+		}
+
+		.clean_button {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 1.8em;
+			width: 1.3em;
+			border: 1px solid;
+			background-color: white;
+		}
+	</style>
+	<title>搜索引擎整合 So - QKTool</title>
+</head>
+
+<body>
+	<script src="../../public/js/adjust_page_width.js"></script>
+
+	<div class="header">
+		<h1><a href="../../index.html">QKTool</a></h1>
+		<h2>搜索引擎整合 So</h2>
+		<h4>版本号：1.0.0</h4>
+	</div>
+
+	<div class="content">
+		<div class="item">
+			<img width="30%" src="baidu_logo.png" alt="百度">
+			<form action="https://www.baidu.com/s" method="get">
+				<input type="text" class="textbox" name="word" value="">
+				<input type="reset" class="clean_button" value="×" onclick="">
+			</form>
+		</div>
+		<br>
+
+		<div class="item">
+			<img width="30%" src="sogou_logo.jpg" alt="搜狗">
+			<form action="https://m.sogou.com/web/searchList.jsp" method="get">
+				<input type="text" class="textbox" name="keyword">
+				<input type="reset" class="clean_button" value="×" onclick="">
+			</form>
+		</div>
+		<br>
+
+		<div class="item">
+			<img width="30%" src="bing_logo.png" alt="必应">
+			<form action="https://cn.bing.com/search" method="get">
+				<input type="text" class="textbox" name="q">
+				<input type="reset" class="clean_button" value="×" onclick="">
+			</form>
+		</div>
+		<br>
+
+		<div class="item">
+			<img width="30%" src="google_logo.png" alt="Google">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" class="textbox" name="q">
+				<input type="reset" class="clean_button" value="×" onclick="">
+			</form>
+		</div>
+		<br>
+	</div>
+	<div class="footer">
+		<div class="footer-copyright"></div>
+	</div>
+	<script src="../../public/js/jquery-1.8.3.min.js"></script>
+	<script>
+		$(function () {
+			$(document).ready(function () {
+				$('.footer-copyright').load('../../public/html/footer-copyright.html');
+			})
+		});
+	</script>
+</body>
+
+</html>

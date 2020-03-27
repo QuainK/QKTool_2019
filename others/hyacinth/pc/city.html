@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/ui_home.js"></script>
+	<script src="js/ui_content.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<title>城市 - 风信子Hyacinth</title>
+</head>
+
+<body>
+	<div class="header">正在加载网页头部内容</div>
+	<div class="content">
+		<div class="content-body" onmouseover="switchContentTitle()" onmouseout="switchContentTitle()">
+			<img class="content-bg" src="../img/city001.jpg" alt="city001">
+			<div class="content-title" id="content-title">
+				<a href="city/city001.html">
+					<h4 class="content-title-text">城市文章001</h4>
+				</a>
+			</div>
+		</div>
+		<div class="content-body" onmouseover="switchContentTitle()" onmouseout="switchContentTitle()">
+			<img class="content-bg" src="../img/city002.jpg" alt="city002">
+			<div class="content-title" id="content-title-city002">
+				<h4 class="content-title-text">城市文章002</h4>
+			</div>
+		</div>
+		<div class="content-body" onmouseover="switchContentTitle()" onmouseout="switchContentTitle()">
+			<img class="content-bg" src="../img/city003.jpg" alt="city003">
+			<div class="content-title" id="content-title-city003">
+				<h4 class="content-title-text">城市文章003</h4>
+			</div>
+		</div>
+	</div>
+
+	<div class='footer'>正在加载网页底部内容</div>
+
+	<script>
+		$(function () {
+			$(document).ready(function () {
+				$('.header').load('common/header.html');
+				$('.footer').load('common/footer.html');
+				// alert($(window).height());
+				// alert($(document).height()); 
+				if ($(window).height() >= $(document).height()) {
+					($('.footer')).toggleClass("footer-pagebottom");
+				}
+			})
+		});
+	</script>
+</body>
+
+</html>

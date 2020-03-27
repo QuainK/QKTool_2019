@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+	<link href="../public/css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../public/css/main.css" rel="stylesheet" type="text/css">
+	<title>常用进制转换器 BDHConterver</title>
+	<style type="text/css">
+		body {
+			font-size: 1em;
+			text-align: center;
+		}
+
+		input {
+			color: #000;
+		}
+
+		/* 没有数字文本框的上下加减按钮 */
+		/*Chrome*/
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			appearance: none;
+			margin: 0;
+		}
+
+		/*FireFox*/
+		input {
+			-moz-appearance: textfield;
+		}
+
+		label {
+			font-size: 1em;
+			display: inline-block;
+			width: 30%;
+		}
+
+		p {
+			font-size: 0.8em;
+		}
+
+		.text_box {
+			display: inline-block;
+			width: 65%;
+			padding: 0.5em 0;
+		}
+
+		#btn_reset {
+			text-align: center;
+			font-size: 1em;
+			padding: 0.5em 1em;
+			background-color: #ff9;
+			border: 2px solid #cc6;
+		}
+
+		#btn_reset:hover {
+			background-color: #ff6;
+			border: 2px solid #aa4;
+		}
+
+		#btn_reset:active {
+			background-color: #aa4;
+			border: 2px solid #882;
+		}
+	</style>
+</head>
+
+<body>
+<script src="../public/js/adjust_page_width.js"></script>
+
+<div class="header">
+	<h1><a href="../index.html">QKTool</a></h1>
+	<h2>常用进制转换器 BDHConterver</h2>
+	<h4>版本号：2.0.0-beta</h4>
+</div>
+
+<div class="content">
+	<form>
+		<label for="num_bin">二进制&nbsp;B</label>
+		<input class="text_box" id="num_bin" min="0" oninput="calculate(2)" placeholder="Binary" type="number">
+		<br><br>
+		<label for="num_oct">八进制&nbsp;O</label>
+		<input class="text_box" id="num_oct" min="0" oninput="calculate(8)" placeholder="Octal" type="number">
+		<br><br>
+		<label for="num_dec">十进制&nbsp;D</label>
+		<input class="text_box" id="num_dec" min="0" oninput="calculate(10)" placeholder="Decimal" type="number">
+		<br><br>
+		<label for="num_hex">十六进制&nbsp;H</label>
+		<input class="text_box" id="num_hex" oninput="calculate(16)" placeholder="Hexadecimal（不区分大小写）" type="text">
+		<br><br>
+		<input id="btn_reset" type="reset" value="清除所有">
+	</form>
+</div>
+
+<br>
+<div class="footer">
+	<h3>更新日志</h3>
+	<h4>版本 2.0.0-beta 日期时间 2019.05.09</h4>
+	<p>重新编写JavaScript代码，大幅减少代码量</p>
+	<h4>版本 1.1.0-beta 日期时间 2019.03.22</h4>
+	<p>增加八进制换算功能</p>
+	<h4>版本 1.0.0-beta 日期时间 2019.03.21</h4>
+	<p>完成二进制、十进制、十六进制互转功能</p>
+	<div id="footer-copyright"></div>
+</div>
+<script src="../public/js/jquery-1.8.3.min.js"></script>
+<script>
+	$(function () {
+		$(document).ready(function () {
+			$('#footer-copyright').load('../public/html/footer-copyright.html');
+		})
+	});
+</script>
+
+<script>
+	bin = document.getElementById('num_bin');
+	oct = document.getElementById('num_oct');
+	dec = document.getElementById('num_dec');
+	hex = document.getElementById('num_hex');
+
+	function calculate(num_type) {
+		switch (num_type) {
+			case 2:
+				oct.value = parseInt(bin.value, 2).toString(8);
+				dec.value = parseInt(bin.value, 2).toString(10);
+				hex.value = parseInt(bin.value, 2).toString(16);
+				break;
+			case 8:
+				bin.value = parseInt(oct.value, 8).toString(2);
+				dec.value = parseInt(oct.value, 8).toString(10);
+				hex.value = parseInt(oct.value, 8).toString(16);
+				break;
+			case 10:
+				bin.value = parseInt(dec.value, 10).toString(2);
+				oct.value = parseInt(dec.value, 10).toString(8);
+				hex.value = parseInt(dec.value, 10).toString(16);
+				break;
+			case 16:
+				bin.value = parseInt(hex.value, 16).toString(2);
+				oct.value = parseInt(hex.value, 16).toString(8);
+				dec.value = parseInt(hex.value, 16).toString(10);
+				break;
+			default:
+				break;
+		}
+	}
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+﻿* {
+	word-wrap: break-word;
+	padding: 0;
+	margin: 0;
+	font-family: "Arial", "宋体";
+}
+
+body {
+	font-size: 1em;
+	background: #324252;
+	text-align: center;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.page-for-phone {
+	margin: 0 5%;
+}
+
+.page-for-pc {
+	margin: 0 30%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: lighter;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h1 a {
+	color: #fff;
+}
+
+h2 {
+	font-size: 1em;
+}
+
+h3 {
+	font-size: 1em;
+}
+
+h4 {
+	margin: 0.5em 0;
+	font-size: 0.8em;
+}
+
+p {
+	text-indent: 2em;
+}
+
+.header {
+	margin: 1em 0;
+	text-align: center;
+}
+
+.content {
+	display: block;
+}
+
+.list-wrap {
+	list-style-type: none;
+}
+
+.list-sublist {
+	display: block;
+}
+
+.list-classname {
+	display: block;
+	padding: 0.5em 1em;
+	text-align: left;
+	background: #213141;
+	border: 1px solid #fff;
+}
+
+.list-classname ul {
+	display: block;
+}
+
+.list-item {
+	display: block;
+	border: 1px solid #fff;
+}
+
+.list-item a {
+	display: block;
+	line-height:3em;
+	color: #fff;
+}
+
+.list-item:hover {
+	background: #102030;
+	border: 1px solid #fff;
+}
+
+.footer {
+	text-align: left;
+	margin: 1em;
+	color:#ccc;
+	background: #324252;
+}

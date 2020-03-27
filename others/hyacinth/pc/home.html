@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<title>风信子 Hyacinth</title>
+</head>
+
+<body>
+	<div class="header">正在加载网页头部内容</div>
+
+	<div class="content">
+		<p><span><a href="userupload.php">上传文章</a></span></p>
+	</div>
+
+	<div class='footer'>正在加载网页底部内容</div>
+
+	<script>
+		$(function () {
+			$(document).ready(function () {
+				$('.header').load('common/header.html');
+				$('.footer').load('common/footer.html');
+				// alert($(window).height());
+				// alert($(document).height()); 
+				if ($(window).height() >= $(document).height()) {
+					($('.footer')).toggleClass("footer-pagebottom");
+				}
+			})
+		});
+	</script>
+</body>
+
+
+
+</html>
