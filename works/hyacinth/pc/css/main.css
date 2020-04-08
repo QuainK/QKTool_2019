@@ -1,0 +1,299 @@
+* {
+  word-wrap: break-word;
+  padding: 0;
+  margin: 0;
+  font-family: "Microsoft YaHei", "宋体", sans-serif;
+}
+
+body {
+  font-size: 1em;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+}
+
+.header {
+  text-align: center;
+  background-color: #91cbe5;
+}
+
+.header-logo {
+  display: inline-block;
+  width: 20%;
+  font-size: 1.3em;
+  vertical-align: middle;
+  letter-spacing: 0.1em;
+}
+
+.header-navbar {
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.header-navbar ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.header-navbar li {
+
+  display: inline-block;
+  width: 30%;
+}
+
+.header-navbar li a {
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.header-navbar li a:hover:not(.active) {
+  color: white;
+  background-color: #1b5eaa;
+}
+
+.header-searchbox {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0.5em 0;
+  width: 30%;
+}
+
+.header-searchbox-text {
+  width: 70%;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  border: 2px solid #39a2cc;
+  -moz-border-radius: 5px;
+  /* Gecko browsers */
+  -webkit-border-radius: 5px;
+  /* Webkit browsers */
+  border-radius: 5px;
+  /* W3C syntax */
+}
+
+.header-searchbox-text:hover {
+  border: 2px solid #5f56e4;
+
+  background-color: #eee;
+}
+
+.header-userbox {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15%;
+  text-align: justify;
+}
+
+.header-userbox-login,
+.header-userbox-register {
+  display: inline-block;
+  color: white;
+  width: 40%;
+  padding: 0.6em 0;
+
+  line-height: 2em;
+  text-align: center;
+}
+
+.header-userbox-login:hover,
+.header-userbox-register:hover {
+  display: inline-block;
+
+  background-color: #505ab3;
+  color: white;
+}
+
+.header-videobox {
+  width: 100%;
+}
+
+.content {
+  clear: both;
+  text-align: center;
+}
+
+
+.content-articlelist,
+.content-articlelist-hidden {
+  width: 100%;
+  transition: all 0.5s ease 0s;
+}
+
+.content-articlelist {
+  left: 0;
+}
+
+.content-articlelist-hidden {
+  left: 100%;
+}
+
+.article {
+  display: inline-block;
+  position: relative;
+  height: 15em;
+  width: 90%;
+  margin: 2em;
+  text-align: left;
+  border: 2px solid #000;
+}
+
+.article-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 25%;
+  height: 100%;
+  background-color: #9ec59f;
+}
+
+.article-title {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  text-align: center;
+  height: 10%;
+  margin: 1em;
+  width: 40%;
+  background-color: #31d1d1;
+}
+
+.article-summary {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  margin: 1em;
+  height: 70%;
+  width: 40%;
+  font-size: 0.9em;
+  text-indent: 2em;
+  background-color: #3985b8;
+}
+
+.article-comment {
+  position: absolute;
+  top: 0;
+  left: 67%;
+  margin: 1em;
+  height: 85%;
+  width: 30%;
+  border: 2px solid #ddd;
+}
+
+.article a {
+  display: inline-block;
+}
+
+.article a:hover {
+  color: #f00;
+}
+
+.content-videolist,
+.content-videolist-hidden {
+  position: absolute;
+  width: 100%;
+  transition: all 0.5s ease 0s;
+}
+
+.content-videolist {
+  right: 0;
+}
+
+.content-videolist-hidden {
+  right: 100%;
+}
+
+.content-videolist video {
+  border: 2px solid #aaa;
+  width: 70%;
+  margin: 1em;
+}
+
+.content-pageswitch {
+  position: fixed;
+  bottom: 5%;
+  left: 0;
+  width: 4em;
+}
+
+.content-pageswitch-button {
+  width: 4em;
+  height: 4em;
+}
+
+.content-body {
+  margin: 2%;
+  position: relative;
+  display: inline-block;
+  width: 20em;
+  height: 15em;
+  vertical-align: middle;
+  overflow-y: hidden;
+}
+
+.content-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.content-title {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  height: 8em;
+  top: 15em;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+  transition: all 0.5s ease 0s;
+}
+
+.content-title-hover {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  height: 8em;
+  top: 7em;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+  transition: all 0.2s ease 0s;
+}
+
+
+.content-title-text {
+  display: inline-block;
+  position: relative;
+  top: 5em;
+  color: #aaa;
+}
+
+.content-title-text:hover {
+  color: #fff;
+}
+
+.footer {
+  display: inline-block;
+  height: 4em;
+  width: 100%;
+  text-align: center;
+  background-color: #ddd;
+}
+
+.footer-pagebottom {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+}

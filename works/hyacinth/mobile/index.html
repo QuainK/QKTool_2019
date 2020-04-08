@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/main.js"></script>
+  <title>风信子 Hyacinth</title>
+</head>
+
+<body>
+<div class='sidebar_hidden' id='sidebar'>
+  <ul>
+    <li><a class='sidebar_list' href='index.html' id='sidebar_home'>首页</a></li>
+    <li><a class='sidebar_list' href='nature.html' id='sidebar_sub1'>自然</a></li>
+    <li><a class='sidebar_list' href='city.html' id='sidebar_sub2'>城市</a></li>
+    <li><a class='sidebar_list' href='support.html' id='sidebar_support'>帮助与支持</a></li>
+    <li><a class='sidebar_list' href='feedback.html' id='sidebar_feedback'>意见反馈</a></li>
+    <li><a class='sidebar_list' href='../pc/index.html'>访问电脑版</a></li>
+  </ul>
+</div>
+<script>
+  document.getElementById("sidebar_home").setAttribute("class", "sidebar_list_active");
+</script>
+
+<div class="container" id="container">
+  <div class='header'>
+    <div class='titlebar'>
+      <div class='sidebarbutton' href='javascript:void(0);' onclick='switch_sidebar_display();'>
+        <img class='titlebar_icon' src='img/menu.jpg'>
+      </div>
+      <div class='titlelabel'>风信子</div>
+      <div class='userbarbutton'>
+        <a href='login.html'><img class='titlebar_icon' src='img/user.jpg'></a>
+      </div>
+    </div>
+    <div class='searchbar'>
+      <input class='searchbar-text' id='searchbox-text' placeholder='搜索内容' type='text'>
+      <input class='searchbar-button' type='submit' value='搜索'>
+    </div>
+    <div class='navbar'>
+      <div class='navbar'>
+        <ul>
+          <li><a href='index.html' id='navbar_home'>首页</a></li>
+          <li><a href='nature.html' id='navbar_sub1'>自然</a></li>
+          <li><a href='city.html' id='navbar_sub2'>城市</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    document.getElementById("navbar_home").setAttribute("class", "active");
+  </script>
+
+  <div class="content">
+    <div class="content-pic"><img class="content-pic-img" src="../img/city001.jpg"></div>
+    <div class="content-pic"><img class="content-pic-img" src="../img/city002.jpg"></div>
+    <div class="content-pic"><img class="content-pic-img" src="../img/city003.jpg"></div>
+  </div>
+
+  <div class='footer'>
+    <div class='links'>友情链接</div>
+    <div class='siteinfo'>风信子 Hyacinth 0.1.0 alpha<br>Copyright © 2018-2019 Hyacinth All Rights Reserved.
+    </div>
+  </div>
+</div>
+</body>
+</html>

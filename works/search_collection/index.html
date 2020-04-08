@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+  <link href="../../css/lib/normalize.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="/favicon.svg" rel="icon">
+  <title>搜索引擎整合 So - QKTool</title>
+</head>
+
+<body>
+<div id="header">
+  <h1 id="brand">
+    <a href="/">QKTool</a>
+  </h1>
+  <div id="header-menu">
+    <a href="/">首页</a>
+    <a href="/log.html">开发日志</a>
+  </div>
+</div>
+
+<div id="title">
+  <h2>搜索引擎整合 So</h2>
+  <h3>版本号：1.0.1</h3>
+</div>
+
+<div id="content">
+  <div class="item-container">
+    <div class="item">
+      <img alt="必应" src="logo_bing.png">
+      <form action="https://cn.bing.com/search" method="get">
+        <input name="q" placeholder="在此输入内容并回车开始必应" type="text">
+      </form>
+    </div>
+
+    <div class="item">
+      <img alt="Google" src="logo_google.png">
+      <form action="https://www.google.com/search" method="get">
+        <input name="q" placeholder="在此输入内容并回车开始谷歌" type="text">
+      </form>
+    </div>
+
+    <div class="item">
+      <img alt="百度" src="logo_baidu.png">
+      <form action="https://www.baidu.com/s" method="get">
+        <input name="word" placeholder="在此输入内容并回车开始百度" type="text" value="">
+      </form>
+    </div>
+
+    <div class="item">
+      <img alt="搜狗" src="logo_sogou.jpg">
+      <form action="https://m.sogou.com/web/searchList.jsp" method="get">
+        <input name="keyword" placeholder="在此输入内容并回车开始搜狗" type="text">
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="log">
+  <p>更新日志</p>
+  <div class="log-item">
+    <span>版本 1.0.1 日期时间 2020.04.08</span>
+    <p>优化HTML/CSS/JS，应用全局风格</p>
+  </div>
+  <div class="log-item">
+    <span>版本 1.0.0 日期时间 2018.10</span>
+    <p>常用搜索引擎整合</p>
+  </div>
+</div>
+
+<div id="footer">
+  <p>QKTool 2.0.0</p>
+  <p>&copy; 2019-2020 QuainK</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+  <link href="../../css/lib/normalize.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="BDHConverter.css" rel="stylesheet">
+  <link href="/favicon.svg" rel="icon">
+  <title>常用进制转换器 BDHConverter - QKTool</title>
+</head>
+
+<body>
+<div id="header">
+  <h1 id="brand">
+    <a href="/">QKTool</a>
+  </h1>
+  <div id="header-menu">
+    <a href="/">首页</a>
+    <a href="/log.html">开发日志</a>
+  </div>
+</div>
+
+<div id="title">
+  <h2>常用进制转换器 BDHConverter</h2>
+  <h3>2.0.0</h3>
+</div>
+
+<div id="content">
+  <form>
+    <label for="num-bin">二进制&nbsp;Binary</label>
+    <input id="num-bin" min="0" oninput="calculate(2,bin.value)" placeholder="Binary" type="number">
+    <label for="num-oct">八进制&nbsp;Octal</label>
+    <input id="num-oct" min="0" oninput="calculate(8,oct.value)" placeholder="Octal" type="number">
+    <label for="num-dec">十进制&nbsp;Decimal</label>
+    <input id="num-dec" min="0" oninput="calculate(10,dec.value)" placeholder="Decimal" type="number">
+    <label for="num-hex">十六进制&nbsp;Hexadecimal（不区分大小写）</label>
+    <input id="num-hex" oninput="calculate(16,hex.value)" placeholder="Hexadecimal（不区分大小写）" type="text">
+    <button type="reset">清除所有</button>
+  </form>
+</div>
+
+<div id="log">
+  <p>更新日志</p>
+  <div class="log-item">
+    <span>版本 2.0.0 日期时间 2020.04.08</span>
+    <p>优化HTML/CSS/JS，应用全局风格</p>
+  </div>
+  <div class="log-item">
+    <span>版本 2.0.0-beta 日期时间 2019.05.09</span>
+    <p>重新编写JavaScript代码，大幅减少代码量</p>
+  </div>
+  <div class="log-item">
+    <span>版本 1.1.0-beta 日期时间 2019.03.22</span>
+    <p>增加八进制换算功能</p>
+  </div>
+  <div class="log-item">
+    <span>版本 1.0.0-beta 日期时间 2019.03.21</span>
+    <p>完成二进制、十进制、十六进制互转功能</p>
+  </div>
+</div>
+
+<div id="footer">
+  <p>QKTool 2.0.0-snapshot</p>
+  <p>&copy; 2019-2020 QuainK</p>
+</div>
+
+<script>
+  bin = document.getElementById('num-bin');
+  oct = document.getElementById('num-oct');
+  dec = document.getElementById('num-dec');
+  hex = document.getElementById('num-hex');
+
+  function calculate(numType, inputValue) {
+    bin.value = parseInt(inputValue, numType).toString(2);
+    oct.value = parseInt(inputValue, numType).toString(8);
+    dec.value = parseInt(inputValue, numType).toString(10);
+    hex.value = parseInt(inputValue, numType).toString(16);
+  }
+</script>
+</body>
+</html>
