@@ -2,7 +2,7 @@
 
 ## 此工程不再更新，仓库已归档。
 
-## 新工程仓库请移步至更新日志请转移至
+## 新工程仓库请转移至
 
 ## [https://github.com/QuainK/qktool](https://github.com/QuainK/qktool "qktool")
 ---
